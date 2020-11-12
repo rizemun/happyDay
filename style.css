@@ -84,6 +84,7 @@ body {
   margin-right: 20px;
   border-radius: 10px;
   font-size: 20px;
+  flex: 1;
   box-shadow: -5px -5px 10px #fff, 5px 5px 10px #bdb9b7;
 }
 .card__title_full-size {
