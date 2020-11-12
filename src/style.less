@@ -1,0 +1,126 @@
+@bgcolor-main: #efebe9;
+@bgcolor-light: #fff;
+@bgcolor-dark: #bdb9b7;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  height: 100vh;
+  background-color: @bgcolor-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comfortaa', cursive;
+
+  ::selection {
+    transition: background 0.3s ease-out;
+    background: #ffb7b7; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #ffb7b7; /* Gecko Browsers */
+  }
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid @bgcolor-light;
+  border-radius: 20px;
+  box-shadow: -10px -10px 20px @bgcolor-light,
+              10px 10px 20px @bgcolor-dark;
+
+  &__check {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: @bgcolor-main;
+    transition: opacity 1s ease-out;
+
+    &._hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__text {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    justify-content: center;
+    box-shadow: inset -5px -5px 10px @bgcolor-light,
+                inset 5px 5px 10px @bgcolor-dark;
+  }
+
+  &__password{
+    outline:none;
+    border: 0;
+    font-size: 20px;
+    padding: 2px 10px;
+    background-color: @bgcolor-main;
+    transition: background-color .3s;
+
+    box-shadow: inset -2px -2px 5px @bgcolor-light,
+                inset 2px 2px 5px @bgcolor-dark;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: @bgcolor-light;
+    }
+  }
+
+  &__field {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: inset -5px -5px 10px @bgcolor-light,
+                inset 5px 5px 10px @bgcolor-dark;
+  }
+
+  &__title {
+    padding: 10px;
+    margin-right: 20px;
+    border-radius:10px;
+    font-size: 20px;
+    box-shadow: -5px -5px 10px @bgcolor-light,
+                5px 5px 10px @bgcolor-dark;
+
+    &_full-size{
+      flex: 1;
+      text-align: center;
+      margin-right: 0;
+      font-weight: bold;
+    }
+  }
+
+  &__value {
+    padding: 10px;
+    border-radius:10px;
+    font-size: 16px;
+    line-height: 25px;
+    -webkit-user-select: all;  /* Chrome all / Safari all */
+    -moz-user-select: all;     /* Firefox all */
+    -ms-user-select: all;      /* IE 10+ */
+    user-select: all;          /* Likely future */
+    box-shadow: -5px -5px 10px @bgcolor-light,
+                5px 5px 10px @bgcolor-dark;
+  }
+
+}

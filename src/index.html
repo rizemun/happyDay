@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <title>Happy day Ann</title>
+</head>
+<body>
+
+<div class="content">
+    <div class="content__wrap">
+        <div class="card">
+            <div class="card__check" data-card-check>
+                <div class="card__text">
+                    Привет, Ань, поздравляю тебя с днем рождения =)
+                    <br>
+                    Желаю тебе частых критуль и поменьше промахов)
+                    <br>
+                    Ну и качественного прицела для стрел)
+                    <br>
+                    <br>
+                    <br>
+                    У меня для тебя есть подарочек,
+                    <br>
+                    Введи пароль что я тебе дал и получи его :)
+                </div>
+                <div class="card__field">
+                    <div class="card__title">Введи пароль:</div>
+                    <div class="card__value">
+                        <input type="password" class="card__password" data-card-password>
+                    </div>
+                </div>
+            </div>
+            <div class="card__wrap">
+                <div class="card__field">
+                    <div class="card__title card__title_full-size">Аккаунт minecraft</div>
+                </div>
+                <div class="card__field">
+                    <div class="card__title">Логин аккаунта:</div>
+                    <div class="card__value">ncsvdykqjojmbcc@mail-one.bizml.ru</div>
+                </div>
+                <div class="card__field">
+                <div class="card__title">Пароль аккаунта:</div>
+                <div class="card__value">Popa101za</div>
+            </div>
+                <div class="card__field">
+                    <div class="card__title">Логин почты:</div>
+                    <div class="card__value">ncsvdykqjojmbcc@mail-one.bizml.ru</div>
+                </div>
+                <div class="card__field">
+                    <div class="card__title">Пароль почты:</div>
+                    <div class="card__value">616161RaAiKG21p*er</div>
+                </div>
+                <div class="card__field">
+                    <div class="card__title">Ответ на секретные вопросы:</div>
+                    <div class="card__value">1</div>
+                </div>
+                <div class="card__field">
+                    <div class="card__title">Почту можно будет сменить:</div>
+                    <div class="card__value">12.12.2020</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const passwordElem = document.querySelector('[data-card-password]');
+    const checkElem = document.querySelector('[data-card-check]');
+    const hiddenClass = '_hidden';
+    const pass = 'assassinLis';
+
+    passwordElem.addEventListener('input', (ev)=> {
+        let value = ev.target.value;
+
+        if(value === pass) {
+            checkElem.classList.add(hiddenClass);
+        }
+    });
+</script>
+</body>
+</html>
